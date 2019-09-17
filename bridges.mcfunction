@@ -11,13 +11,13 @@ scoreboard players set 100 statsbridges 100
 # set totalredyellow statsbridges
 
 scoreboard players operation totalredyellow statsbridges = redscore scores
-scoreboard players operation totalredyellow statsbridges += yellowscore scores	
+scoreboard players operation totalredyellow statsbridges += yellowscore scores
 
 
 # set totalyellowblue statsbridges
 
 scoreboard players operation totalyellowblue statsbridges = yellowscore scores
-scoreboard players operation totalyellowblue statsbridges += bluescore scores	
+scoreboard players operation totalyellowblue statsbridges += bluescore scores
 
 
 # set totalbluegreen statsbridges
