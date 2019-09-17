@@ -266,7 +266,7 @@ fill 5034 85 5006 5034 86 5006 minecraft:spruce_wood
 # set redyellowtomid statsbridges
 
 scoreboard players set redyellowtomid statsbridges 100
-scoreboard players operation redyellowtomid statsbridges *= totalredyellow statsbridges
+scoreboard players operation redyellowtomid statsbridges *= totalbluegreen statsbridges
 scoreboard players operation redyellowtomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation redyellowtomid1 statsbridges = A statsbridges
@@ -292,7 +292,7 @@ fill 5002 85 5030 5002 86 5030 minecraft:spruce_wood
 # set yellowbluetomid statsbridges
 
 scoreboard players set yellowbluetomid statsbridges 100
-scoreboard players operation yellowbluetomid statsbridges *= totalyellowblue statsbridges
+scoreboard players operation yellowbluetomid statsbridges *= totalgreenred statsbridges
 scoreboard players operation yellowbluetomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation yellowbluetomid1 statsbridges = A statsbridges
@@ -318,7 +318,7 @@ fill 4970 85 5002 4970 86 5002 minecraft:spruce_wood
 # set bluegreentomid statsbridges
 
 scoreboard players set bluegreentomid statsbridges 100
-scoreboard players operation bluegreentomid statsbridges *= totalbluegreen statsbridges
+scoreboard players operation bluegreentomid statsbridges *= totalredyellow statsbridges
 scoreboard players operation bluegreentomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation bluegreentomid1 statsbridges = A statsbridges
@@ -344,7 +344,7 @@ fill 4998 85 4970 4998 86 4970 minecraft:spruce_wood
 # set greenredtomid statsbridges
 
 scoreboard players set greenredtomid statsbridges 100
-scoreboard players operation greenredtomid statsbridges *= totalgreenred statsbridges
+scoreboard players operation greenredtomid statsbridges *= totalyellowblue statsbridges
 scoreboard players operation greenredtomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation greenredtomid1 statsbridges = A statsbridges
