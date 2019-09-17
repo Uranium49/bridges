@@ -132,13 +132,13 @@ scoreboard players operation bluetoyellow statsbridges /= yellowscore statsbridg
 
 scoreboard players set bluetoyellow1 statsbridges 30
 
-execute if score yellowtoblue statsbridges >= 30 statsbridges run scoreboard players set bluetoyellow1 statsbridges 45
+execute if score bluetoyellow statsbridges >= 30 statsbridges run scoreboard players set bluetoyellow1 statsbridges 45
 
-execute if score yellowtoblue statsbridges >= 45 statsbridges run scoreboard players set bluetoyellow1 statsbridges 60
+execute if score bluetoyellow statsbridges >= 45 statsbridges run scoreboard players set bluetoyellow1 statsbridges 60
 
-execute if score yellowtoblue statsbridges >= 60 statsbridges run scoreboard players set bluetoyellow1 statsbridges 85
+execute if score bluetoyellow statsbridges >= 60 statsbridges run scoreboard players set bluetoyellow1 statsbridges 85
 
-execute if score yellowtoblue statsbridges >= 85 statsbridges run scoreboard players set bluetoyellow1 statsbridges 100
+execute if score bluetoyellow statsbridges >= 85 statsbridges run scoreboard players set bluetoyellow1 statsbridges 100
 
 execute store result block 10001 101 10087 integrity float 0.01 run scoreboard players get bluetoyellow1 statsbridges
 fill 4966 79 4967 4962 90 4994 air replace minecraft:spruce_planks
