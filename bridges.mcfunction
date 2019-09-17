@@ -6,6 +6,7 @@ scoreboard players set B statsbridges 31
 scoreboard players set C statsbridges 46
 scoreboard players set D statsbridges 61
 scoreboard players set E statsbridges 100
+scoreboard players set F statsbridges 0
 
 
 # set les toto
@@ -65,6 +66,8 @@ execute if score redtoyellow statsbridges >= C statsbridges run scoreboard playe
 
 execute if score redtoyellow statsbridges >= D statsbridges run scoreboard players operation redtoyellow1 statsbridges = E statsbridges
 
+execute if score redscore scores = F statsbridges run scoreboard players operation redtoyellow1 statsbridges = E statsbridges
+
 execute store result block 9998 101 10090 integrity float 0.01 run scoreboard players get redtoyellow1 statsbridges
 fill 5033 79 5034 5006 90 5038 air replace minecraft:spruce_planks
 fill 5033 79 5034 5006 90 5038 air replace minecraft:spruce_stairs
@@ -92,6 +95,8 @@ execute if score yellowtored statsbridges >= B statsbridges run scoreboard playe
 execute if score yellowtored statsbridges >= C statsbridges run scoreboard players operation yellowtored1 statsbridges = D statsbridges
 
 execute if score yellowtored statsbridges >= D statsbridges run scoreboard players operation yellowtored1 statsbridges = E statsbridges
+
+execute if score yellowscore scores = F statsbridges run scoreboard players operation yellowtored1 statsbridges = E statsbridges
 
 execute store result block 9998 101 10088 integrity float 0.01 run scoreboard players get yellowtored1 statsbridges
 fill 4967 79 5034 4994 90 5038 air replace minecraft:spruce_planks
@@ -122,6 +127,8 @@ execute if score yellowtoblue statsbridges >= C statsbridges run scoreboard play
 
 execute if score yellowtoblue statsbridges >= D statsbridges run scoreboard players operation yellowtoblue1 statsbridges = E statsbridges
 
+execute if score yellowscore scores = F statsbridges run scoreboard players operation yellowtoblue1 statsbridges = E statsbridges
+
 execute store result block 9999 101 10087 integrity float 0.01 run scoreboard players get yellowtoblue1 statsbridges
 fill 4966 79 5033 4962 90 5006 air replace minecraft:spruce_planks
 fill 4966 79 5033 4962 90 5006 air replace minecraft:spruce_stairs
@@ -149,6 +156,8 @@ execute if score bluetoyellow statsbridges >= B statsbridges run scoreboard play
 execute if score bluetoyellow statsbridges >= C statsbridges run scoreboard players operation bluetoyellow1 statsbridges = D statsbridges
 
 execute if score bluetoyellow statsbridges >= D statsbridges run scoreboard players operation bluetoyellow1 statsbridges = E statsbridges
+
+execute if score bluescore scores = F statsbridges run scoreboard players operation bluetoyellow1 statsbridges = E statsbridges
 
 execute store result block 10001 101 10087 integrity float 0.01 run scoreboard players get bluetoyellow1 statsbridges
 fill 4966 79 4967 4962 90 4994 air replace minecraft:spruce_planks
@@ -179,6 +188,8 @@ execute if score bluetogreen statsbridges >= C statsbridges run scoreboard playe
 
 execute if score bluetogreen statsbridges >= D statsbridges run scoreboard players operation bluetogreen1 statsbridges = E statsbridges
 
+execute if score bluescore scores = F statsbridges run scoreboard players operation bluetogreen1 statsbridges = E statsbridges
+
 execute store result block 10002 101 10088 integrity float 0.01 run scoreboard players get bluetogreen1 statsbridges
 fill 4967 79 4966 4994 90 4962 air replace minecraft:spruce_planks
 fill 4967 79 4966 4994 90 4962 air replace minecraft:spruce_stairs
@@ -206,6 +217,8 @@ execute if score greentoblue statsbridges >= B statsbridges run scoreboard playe
 execute if score greentoblue statsbridges >= C statsbridges run scoreboard players operation greentoblue1 statsbridges = D statsbridges
 
 execute if score greentoblue statsbridges >= D statsbridges run scoreboard players operation greentoblue1 statsbridges = E statsbridges
+
+execute if score greenscore scores = F statsbridges run scoreboard players operation greentoblue1 statsbridges = E statsbridges
 
 execute store result block 10002 101 10090 integrity float 0.01 run scoreboard players get greentoblue1 statsbridges
 fill 5033 79 4966 5006 90 4962 air replace minecraft:spruce_planks
@@ -236,6 +249,8 @@ execute if score greentored statsbridges >= C statsbridges run scoreboard player
 
 execute if score greentored statsbridges >= D statsbridges run scoreboard players operation greentored1 statsbridges = E statsbridges
 
+execute if score greenscore scores = F statsbridges run scoreboard players operation greentored1 statsbridges = E statsbridges
+
 execute store result block 10001 101 10091 integrity float 0.01 run scoreboard players get greentored1 statsbridges
 fill 5034 79 4967 5038 90 4994 air replace minecraft:spruce_planks
 fill 5034 79 4967 5038 90 4994 air replace minecraft:spruce_stairs
@@ -264,6 +279,8 @@ execute if score redtogreen statsbridges >= C statsbridges run scoreboard player
 
 execute if score redtogreen statsbridges >= D statsbridges run scoreboard players operation redtogreen1 statsbridges = E statsbridges
 
+execute if score redscore scores = F statsbridges run scoreboard players operation redtogreen1 statsbridges = E statsbridges
+
 execute store result block 9999 101 10091 integrity float 0.01 run scoreboard players get redtogreen1 statsbridges
 fill 5034 79 5033 5038 90 5006 air replace minecraft:spruce_planks
 fill 5034 79 5033 5038 90 5006 air replace minecraft:spruce_stairs
@@ -282,7 +299,7 @@ fill 5034 85 5006 5034 86 5006 minecraft:spruce_wood
 # set redyellowtomid statsbridges
 
 scoreboard players set redyellowtomid statsbridges 100
-scoreboard players operation redyellowtomid statsbridges *= totalgreenred statsbridges
+scoreboard players operation redyellowtomid statsbridges *= totalbluegreen statsbridges
 scoreboard players operation redyellowtomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation redyellowtomid1 statsbridges = E statsbridges
@@ -297,6 +314,8 @@ execute if score redyellowtomid statsbridges >= C statsbridges run scoreboard pl
 
 execute if score redyellowtomid statsbridges >= D statsbridges run scoreboard players operation redyellowtomid1 statsbridges = E statsbridges
 
+execute if score totalredyellow statsbridges = F statsbridges run scoreboard players operation redyellowtomid1 statsbridges = E statsbridges
+
 execute store result block 9999 101 10089 integrity float 0.01 run scoreboard players get redyellowtomid1 statsbridges
 fill 5002 86 5030 4998 94 5010 air replace minecraft:spruce_planks
 fill 5002 86 5030 4998 94 5010 air replace minecraft:spruce_stairs
@@ -310,7 +329,7 @@ fill 5002 85 5030 5002 86 5030 minecraft:spruce_wood
 # set yellowbluetomid statsbridges
 
 scoreboard players set yellowbluetomid statsbridges 100
-scoreboard players operation yellowbluetomid statsbridges *= totalbluegreen statsbridges
+scoreboard players operation yellowbluetomid statsbridges *= totalgreenred statsbridges
 scoreboard players operation yellowbluetomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation yellowbluetomid1 statsbridges = E statsbridges
@@ -325,6 +344,8 @@ execute if score yellowbluetomid statsbridges >= C statsbridges run scoreboard p
 
 execute if score yellowbluetomid statsbridges >= D statsbridges run scoreboard players operation yellowbluetomid1 statsbridges = E statsbridges
 
+execute if score totalyellowblue statsbridges = F statsbridges run scoreboard players operation yellowbluetomid1 statsbridges = E statsbridges
+
 execute store result block 10000 101 10088 integrity float 0.01 run scoreboard players get yellowbluetomid1 statsbridges
 fill 4970 86 5002 4990 94 4998 air replace minecraft:spruce_planks
 fill 4970 86 5002 4990 94 4998 air replace minecraft:spruce_stairs
@@ -338,7 +359,7 @@ fill 4970 85 5002 4970 86 5002 minecraft:spruce_wood
 # set bluegreentomid statsbridges
 
 scoreboard players set bluegreentomid statsbridges 100
-scoreboard players operation bluegreentomid statsbridges *= totalyellowblue statsbridges
+scoreboard players operation bluegreentomid statsbridges *= totalredyellow statsbridges
 scoreboard players operation bluegreentomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation bluegreentomid1 statsbridges = E statsbridges
@@ -353,6 +374,8 @@ execute if score bluegreentomid statsbridges >= C statsbridges run scoreboard pl
 
 execute if score bluegreentomid statsbridges >= D statsbridges run scoreboard players operation bluegreentomid1 statsbridges = E statsbridges
 
+execute if score totalbluegreen statsbridges = F statsbridges run scoreboard players operation bluegreentomid1 statsbridges = E statsbridges
+
 execute store result block 10001 101 10089 integrity float 0.01 run scoreboard players get bluegreentomid1 statsbridges
 fill 4998 86 4970 5002 94 4990 air replace minecraft:spruce_planks
 fill 4998 86 4970 5002 94 4990 air replace minecraft:spruce_stairs
@@ -366,7 +389,7 @@ fill 4998 85 4970 4998 86 4970 minecraft:spruce_wood
 # set greenredtomid statsbridges
 
 scoreboard players set greenredtomid statsbridges 100
-scoreboard players operation greenredtomid statsbridges *= totalredyellow statsbridges
+scoreboard players operation greenredtomid statsbridges *= totalyellowblue statsbridges
 scoreboard players operation greenredtomid statsbridges /= totalwool statsbridges
 
 scoreboard players operation greenredtomid1 statsbridges = E statsbridges
@@ -380,6 +403,8 @@ execute if score greenredtomid statsbridges >= B statsbridges run scoreboard pla
 execute if score greenredtomid statsbridges >= C statsbridges run scoreboard players operation greenredtomid1 statsbridges = D statsbridges
 
 execute if score greenredtomid statsbridges >= D statsbridges run scoreboard players operation greenredtomid1 statsbridges = E statsbridges
+
+execute if score totalgreenred statsbridges = F statsbridges run scoreboard players operation greenredtomid1 statsbridges = E statsbridges
 
 execute store result block 10000 101 10090 integrity float 0.01 run scoreboard players get greenredtomid1 statsbridges
 fill 5030 86 4998 5010 94 5002 air replace minecraft:spruce_planks
