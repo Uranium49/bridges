@@ -53,7 +53,9 @@ scoreboard players set redtoyellow statsbridges 100
 scoreboard players operation redtoyellow statsbridges *= yellowscore scores
 scoreboard players operation redtoyellow statsbridges /= totalredyellow statsbridges
 
-scoreboard players operation redtoyellow1 statsbridges = A statsbridges
+scoreboard players operation redtoyellow1 statsbridges = E statsbridges
+
+execute if score redtoyellow statsbridges < A statsbridges run scoreboard players operation redtoyellow1 statsbridges = A statsbridges
 
 execute if score redtoyellow statsbridges >= A statsbridges run scoreboard players operation redtoyellow1 statsbridges = B statsbridges
 
@@ -79,7 +81,9 @@ scoreboard players set yellowtored statsbridges 100
 scoreboard players operation yellowtored statsbridges *= redscore scores
 scoreboard players operation yellowtored statsbridges /= totalredyellow statsbridges
 
-scoreboard players operation yellowtored1 statsbridges = A statsbridges
+scoreboard players operation yellowtored1 statsbridges = E statsbridges
+
+execute if score yellowtored statsbridges < A statsbridges run scoreboard players operation yellowtored1 statsbridges = A statsbridges
 
 execute if score yellowtored statsbridges >= A statsbridges run scoreboard players operation yellowtored1 statsbridges = B statsbridges
 
@@ -106,7 +110,9 @@ scoreboard players set yellowtoblue statsbridges 100
 scoreboard players operation yellowtoblue statsbridges *= bluescore scores
 scoreboard players operation yellowtoblue statsbridges /= totalyellowblue statsbridges
 
-scoreboard players operation yellowtoblue1 statsbridges = A statsbridges
+scoreboard players operation yellowtoblue1 statsbridges = E statsbridges
+
+execute if score yellowtoblue statsbridges < A statsbridges run scoreboard players operation yellowtoblue1 statsbridges = A statsbridges
 
 execute if score yellowtoblue statsbridges >= A statsbridges run scoreboard players operation yellowtoblue1 statsbridges = B statsbridges
 
@@ -132,7 +138,9 @@ scoreboard players set bluetoyellow statsbridges 100
 scoreboard players operation bluetoyellow statsbridges *= yellowscore scores
 scoreboard players operation bluetoyellow statsbridges /= totalyellowblue statsbridges
 
-scoreboard players operation bluetoyellow1 statsbridges = A statsbridges
+scoreboard players operation bluetoyellow1 statsbridges = E statsbridges
+
+execute if score bluetoyellow statsbridges < A statsbridges run scoreboard players operation bluetoyellow1 statsbridges = A statsbridges
 
 execute if score bluetoyellow statsbridges >= A statsbridges run scoreboard players operation bluetoyellow1 statsbridges = B statsbridges
 
@@ -159,7 +167,9 @@ scoreboard players set bluetogreen statsbridges 100
 scoreboard players operation bluetogreen statsbridges *= greenscore scores
 scoreboard players operation bluetogreen statsbridges /= totalbluegreen statsbridges
 
-scoreboard players operation bluetogreen1 statsbridges = A statsbridges
+scoreboard players operation bluetogreen1 statsbridges = E statsbridges
+
+execute if score bluetogreen statsbridges < A statsbridges run scoreboard players operation bluetogreen1 statsbridges = A statsbridges
 
 execute if score bluetogreen statsbridges >= A statsbridges run scoreboard players operation bluetogreen1 statsbridges = B statsbridges
 
@@ -185,7 +195,9 @@ scoreboard players set greentoblue statsbridges 100
 scoreboard players operation greentoblue statsbridges *= bluescore scores
 scoreboard players operation greentoblue statsbridges /= totalbluegreen statsbridges
 
-scoreboard players operation greentoblue1 statsbridges = A statsbridges
+scoreboard players operation greentoblue1 statsbridges = E statsbridges
+
+execute if score greentoblue statsbridges < A statsbridges run scoreboard players operation greentoblue1 statsbridges = A statsbridges
 
 execute if score greentoblue statsbridges >= A statsbridges run scoreboard players operation greentoblue1 statsbridges = B statsbridges
 
@@ -212,7 +224,9 @@ scoreboard players set greentored statsbridges 100
 scoreboard players operation greentored statsbridges *= redscore scores
 scoreboard players operation greentored statsbridges /= totalgreenred statsbridges
 
-scoreboard players operation greentored1 statsbridges = A statsbridges
+scoreboard players operation greentored1 statsbridges = E statsbridges
+
+execute if score greentored statsbridges < A statsbridges run scoreboard players operation greentored1 statsbridges = A statsbridges
 
 execute if score greentored statsbridges >= A statsbridges run scoreboard players operation greentored1 statsbridges = B statsbridges
 
@@ -238,7 +252,9 @@ scoreboard players set redtogreen statsbridges 100
 scoreboard players operation redtogreen statsbridges *= greenscore scores
 scoreboard players operation redtogreen statsbridges /= totalgreenred statsbridges
 
-scoreboard players operation redtogreen1 statsbridges = A statsbridges
+scoreboard players operation redtogreen1 statsbridges = E statsbridges
+
+execute if score redtogreen statsbridges < A statsbridges run scoreboard players operation redtogreen1 statsbridges = A statsbridges
 
 execute if score redtogreen statsbridges >= A statsbridges run scoreboard players operation redtogreen1 statsbridges = B statsbridges
 
@@ -266,10 +282,12 @@ fill 5034 85 5006 5034 86 5006 minecraft:spruce_wood
 # set redyellowtomid statsbridges
 
 scoreboard players set redyellowtomid statsbridges 100
-scoreboard players operation redyellowtomid statsbridges *= totalbluegreen statsbridges
+scoreboard players operation redyellowtomid statsbridges *= totalgreenred statsbridges
 scoreboard players operation redyellowtomid statsbridges /= totalwool statsbridges
 
-scoreboard players operation redyellowtomid1 statsbridges = A statsbridges
+scoreboard players operation redyellowtomid1 statsbridges = E statsbridges
+
+execute if score redyellowtomid statsbridges < A statsbridges run scoreboard players operation redyellowtomid1 statsbridges = A statsbridges
 
 execute if score redyellowtomid statsbridges >= A statsbridges run scoreboard players operation redyellowtomid1 statsbridges = B statsbridges
 
@@ -292,10 +310,12 @@ fill 5002 85 5030 5002 86 5030 minecraft:spruce_wood
 # set yellowbluetomid statsbridges
 
 scoreboard players set yellowbluetomid statsbridges 100
-scoreboard players operation yellowbluetomid statsbridges *= totalgreenred statsbridges
+scoreboard players operation yellowbluetomid statsbridges *= totalbluegreen statsbridges
 scoreboard players operation yellowbluetomid statsbridges /= totalwool statsbridges
 
-scoreboard players operation yellowbluetomid1 statsbridges = A statsbridges
+scoreboard players operation yellowbluetomid1 statsbridges = E statsbridges
+
+execute if score yellowbluetomid statsbridges < A statsbridges run scoreboard players operation yellowbluetomid1 statsbridges = A statsbridges
 
 execute if score yellowbluetomid statsbridges >= A statsbridges run scoreboard players operation yellowbluetomid1 statsbridges = B statsbridges
 
@@ -318,10 +338,12 @@ fill 4970 85 5002 4970 86 5002 minecraft:spruce_wood
 # set bluegreentomid statsbridges
 
 scoreboard players set bluegreentomid statsbridges 100
-scoreboard players operation bluegreentomid statsbridges *= totalredyellow statsbridges
+scoreboard players operation bluegreentomid statsbridges *= totalyellowblue statsbridges
 scoreboard players operation bluegreentomid statsbridges /= totalwool statsbridges
 
-scoreboard players operation bluegreentomid1 statsbridges = A statsbridges
+scoreboard players operation bluegreentomid1 statsbridges = E statsbridges
+
+execute if score bluegreentomid statsbridges < A statsbridges run scoreboard players operation bluegreentomid1 statsbridges = A statsbridges
 
 execute if score bluegreentomid statsbridges >= A statsbridges run scoreboard players operation bluegreentomid1 statsbridges = B statsbridges
 
@@ -344,10 +366,12 @@ fill 4998 85 4970 4998 86 4970 minecraft:spruce_wood
 # set greenredtomid statsbridges
 
 scoreboard players set greenredtomid statsbridges 100
-scoreboard players operation greenredtomid statsbridges *= totalyellowblue statsbridges
+scoreboard players operation greenredtomid statsbridges *= totalredyellow statsbridges
 scoreboard players operation greenredtomid statsbridges /= totalwool statsbridges
 
-scoreboard players operation greenredtomid1 statsbridges = A statsbridges
+scoreboard players operation greenredtomid1 statsbridges = E statsbridges
+
+execute if score greenredtomid statsbridges < A statsbridges run scoreboard players operation greenredtomid1 statsbridges = A statsbridges
 
 execute if score greenredtomid statsbridges >= A statsbridges run scoreboard players operation greenredtomid1 statsbridges = B statsbridges
 
